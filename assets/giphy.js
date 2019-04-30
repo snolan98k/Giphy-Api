@@ -21,10 +21,13 @@ renderButtons();
 
 //On button click Ajax request(uses document.on('click') so it also works for dynamically made new buttons)
 $(document).on('click', '.animal', function () {
-
+    console.log("inside click event");
     var animal = $(this).data('name');
-    var apikey = "QzmZUdwIV58QlqYnpEIdUwCEosj0zCQr"
-    var queryURL = "https://developers.giphy.com/dashboard/" + animal + "&apikey=QzmZUdwIV58QlqYnpEIdUwCEosj0zCQr";
+    console.log(`this is the animal that is clicked ${animal}`);
+    var apikey = "7kPoVQvKhdqoHfC9xXkKgQd6BoUXX93P";
+    var queryURL = " https://api.giphy.com/v1/gifs/search?q=" +
+        animal + "&api_key=7kPoVQvKhdqoHfC9xXkKgQd6BoUXX93P";
+
     $.ajax({
         url: queryURL,
         method: 'GET'
