@@ -23,7 +23,7 @@ renderButtons();
 $(document).on('click', '.animal', function () {
 
     var animal = $(this).data('name');
-
+    var apikey = "QzmZUdwIV58QlqYnpEIdUwCEosj0zCQr"
     var queryURL = "https://developers.giphy.com/dashboard/" + animal + "&apikey=QzmZUdwIV58QlqYnpEIdUwCEosj0zCQr";
     $.ajax({
         url: queryURL,
